@@ -1,10 +1,12 @@
 ---
 name: frontend-architect
 description: >
-  Strategic frontend architecture decisions for any project: framework selection,
-  rendering strategy, state management, design systems, testing, performance, and accessibility.
-  Trigger: When choosing a frontend framework, setting up a new frontend project, deciding on
-  a component library, or making architectural decisions for a web application.
+  General-purpose frontend architecture skill for stack definition at project start.
+  Guides framework selection (React/Vue/Svelte/Angular/Next/Nuxt/etc.), rendering strategy,
+  state management, design systems, testing, performance, and accessibility.
+  Trigger: When starting a new frontend project and need to define the stack,
+  choosing between frameworks, evaluating options for a team, or making cross-framework
+  architectural decisions.
 license: Apache-2.0
 metadata:
   author: kozz36

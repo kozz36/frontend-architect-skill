@@ -1,6 +1,10 @@
 # 🏗️ frontend-architect-skill
 
-> Strategic frontend architecture decisions for AI agents and engineering teams. Based on real ecosystem research validated against live sources (May 2026).
+> **General-purpose** frontend architecture skill for **stack definition at project start**.
+> Guides framework selection (React, Vue, Svelte, Angular, Next, Nuxt, etc.), rendering
+> strategy, state management, design systems, testing, performance, accessibility, AI-Ready
+> governance, client-side security (OWASP), ADR traceability, and Green Web sustainability.
+> Based on real ecosystem research validated against live sources (May 2026).
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 

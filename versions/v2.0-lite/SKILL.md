@@ -1,10 +1,11 @@
 ---
 name: frontend-architect-lite
 description: >
-  Concise frontend architecture decisions: framework, rendering, state, design systems,
-  testing, performance, a11y, AI-Ready patterns, OWASP security, Green Web KPIs.
-  Trigger: When making frontend architectural decisions under time constraints or
-  for MVP/greenfield kickoff.
+  Concise general-purpose frontend architecture skill for stack definition at project start.
+  Covers framework selection, rendering, state, design systems, testing, performance,
+  a11y, AI-Ready patterns, OWASP security, Green Web KPIs.
+  Trigger: When starting a new frontend project under time constraints or for MVP/greenfield kickoff
+  and need to define the stack.
 license: Apache-2.0
 metadata:
   author: kozz36
