@@ -22,19 +22,20 @@ Built from a 688-line research document analyzing the 2025-2026 frontend ecosyst
 
 | Version | File | Size | When to Use |
 |---------|------|------|-------------|
-| **v2.0** (Full) | [`versions/v2.0/SKILL.md`](versions/v2.0/SKILL.md) | ~556 lines | Senior architects, detailed decision-making, multiple patterns per section |
-| **v2.0-lite** | [`versions/v2.0-lite/SKILL.md`](versions/v2.0-lite/SKILL.md) | ~385 lines | Rapid kickoffs, MVP decisions, CI/CD ingestion, under time pressure |
+| **v3.0** (Current) | [`versions/v3.0/SKILL.md`](versions/v3.0/SKILL.md) | ~55 lines + references | Compact runtime skill with curated `references/` and May 2026 source index |
+| **v2.0** (Historical) | [`versions/v2.0/SKILL.md`](versions/v2.0/SKILL.md) | ~556 lines | Preserved for backward compatibility; verify claims against v3 before reuse |
+| **v2.0-lite** (Historical) | [`versions/v2.0-lite/SKILL.md`](versions/v2.0-lite/SKILL.md) | ~385 lines | Preserved for backward compatibility; v3.0 replaces it for active runtime ingestion |
 | **v1.0** (Original) | [`versions/v1.0/SKILL.md`](versions/v1.0/SKILL.md) | ~367 lines | Pre-2026 reference. Preserved for backward compatibility |
 
-### What's New in v2.0 (May 2026)
+### What's New in v3.0 (May 2026)
 
 Validated against real ecosystem state:
 - ✅ **Next.js 16** — Cache Components, `updateTag`, `proxy.ts`, Turbopack stable
 - ✅ **Nuxt 4** — Layers for modular monorepo, Nitro engine
-- ✅ **Vitest 4.1.5** — Native Browser Mode with Playwright, ARIA snapshots, visual regression
+- ✅ **Vitest 4.1.x** — Browser Mode and `toMatchScreenshot` visual regression
 - ⚠️ **Vue 3.6 / Vapor Mode** — Explicitly marked as beta. Production recommendation stays on 3.5+
 - ✅ **OWASP Client-Side Top 10** — Real, active hardening reference
-- ✅ **European Accessibility Act** — Enforcement active since June 2025
+- ✅ **European Accessibility Act** — Enforcement applies from 28 June 2025; penalties vary by Member State
 
 **New domains not in v1:**
 - 🤖 **AI-Ready Architecture** — 5 rules preventing AI agent hallucinations when consuming your codebase
@@ -59,7 +60,7 @@ git clone https://github.com/kozz36/frontend-architect-skill.git
 
 ### For Human Architects
 
-Open `versions/v2.0/SKILL.md` and jump to:
+Open `versions/v3.0/SKILL.md` for the runtime contract, then use `versions/v3.0/references/technical-reference.md` for detailed matrices. Key reference areas:
 - **Section 13** — Quick Stack Selector (decision tree)
 - **Section 9** — Security hardening checklist
 - **Section 10** — ADR template for your next RFC
@@ -73,9 +74,14 @@ versions/
 ├── v1.0/
 │   └── SKILL.md              # Original (pre-2026)
 ├── v2.0/
-│   └── SKILL.md              # Full reference (2026)
-└── v2.0-lite/
-    └── SKILL.md              # Condensed for rapid decisions
+│   └── SKILL.md              # Historical full reference
+├── v2.0-lite/
+│   └── SKILL.md              # Historical condensed reference
+└── v3.0/
+    ├── SKILL.md              # Current compact runtime contract
+    └── references/
+        ├── technical-reference.md
+        └── source-index.md
 docs/
 ├── CHANGELOG.md              # Verified version history
 └── CONTRIBUTING.md           # How to contribute improvements
