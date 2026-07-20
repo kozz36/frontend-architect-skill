@@ -4,7 +4,7 @@
 > Guides framework selection (React, Vue, Svelte, Angular, Next, Nuxt, etc.), rendering
 > strategy, state management, design systems, testing, performance, accessibility, AI-Ready
 > governance, client-side security (OWASP), ADR traceability, and Green Web sustainability.
-> Based on real ecosystem research validated against live sources (May 2026).
+> Based on real ecosystem research validated against live sources (July 2026).
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
@@ -22,26 +22,22 @@ Built from a 688-line research document analyzing the 2025-2026 frontend ecosyst
 
 | Version | File | Size | When to Use |
 |---------|------|------|-------------|
-| **v3.0** (Current) | [`versions/v3.0/SKILL.md`](versions/v3.0/SKILL.md) | ~55 lines + references | Compact runtime skill with curated `references/` and May 2026 source index |
+| **v3.1** (Current) | [`versions/v3.1/SKILL.md`](versions/v3.1/SKILL.md) | Compact runtime + references | Native-platform, progressive-enhancement, INP, SSR, and accessibility architecture update |
+| **v3.0** (Historical) | [`versions/v3.0/SKILL.md`](versions/v3.0/SKILL.md) | ~55 lines + references | May 2026 references-based runtime skill |
 | **v2.0** (Historical) | [`versions/v2.0/SKILL.md`](versions/v2.0/SKILL.md) | ~556 lines | Preserved for backward compatibility; verify claims against v3 before reuse |
-| **v2.0-lite** (Historical) | [`versions/v2.0-lite/SKILL.md`](versions/v2.0-lite/SKILL.md) | ~385 lines | Preserved for backward compatibility; v3.0 replaces it for active runtime ingestion |
+| **v2.0-lite** (Historical) | [`versions/v2.0-lite/SKILL.md`](versions/v2.0-lite/SKILL.md) | ~385 lines | Preserved for backward compatibility; v3.1 replaces it for active runtime ingestion |
 | **v1.0** (Original) | [`versions/v1.0/SKILL.md`](versions/v1.0/SKILL.md) | ~367 lines | Pre-2026 reference. Preserved for backward compatibility |
 
-### What's New in v3.0 (May 2026)
+### What's New in v3.1 (July 2026)
 
 Validated against real ecosystem state:
-- ✅ **Next.js 16** — Cache Components, `updateTag`, `proxy.ts`, Turbopack stable
-- ✅ **Nuxt 4** — Layers for modular monorepo, Nitro engine
-- ✅ **Vitest 4.1.x** — Browser Mode and `toMatchScreenshot` visual regression
-- ⚠️ **Vue 3.6 / Vapor Mode** — Explicitly marked as beta. Production recommendation stays on 3.5+
-- ✅ **OWASP Client-Side Top 10** — Real, active hardening reference
-- ✅ **European Accessibility Act** — Enforcement applies from 28 June 2025; penalties vary by Member State
+- **Native overlays and motion** — Popover API, CSS Anchor Positioning, `@starting-style`, and View Transition API with support gates.
+- **Defensive progressive enhancement** — essential content remains visible and operable without optional platform features.
+- **Interaction performance** — INP is the field outcome; TBT remains a lab diagnostic proxy.
+- **Accessibility architecture** — WCAG 2.2 focus visibility, target size, and jurisdiction-specific legal mapping.
+- **Server rendering purity** — browser globals are isolated from server and initial render evaluation.
 
-**New domains not in v1:**
-- 🤖 **AI-Ready Architecture** — 5 rules preventing AI agent hallucinations when consuming your codebase
-- 🔐 **Client-Side Security (OWASP)** — Actionable hardening table + 6-point checklist
-- 📋 **Governance: ADRs** — Architecture Decision Records template with lifecycle rules (RAG-ingestible)
-- 🌱 **Green Web** — Carbon budget targets, optimization techniques, auditing tools
+The update rejects blanket claims that container queries replace media queries, native popovers replace every accessible overlay library, or WCAG alone proves legal compliance.
 
 ---
 
@@ -60,7 +56,7 @@ git clone https://github.com/kozz36/frontend-architect-skill.git
 
 ### For Human Architects
 
-Open `versions/v3.0/SKILL.md` for the runtime contract, then use `versions/v3.0/references/technical-reference.md` for detailed matrices. Key reference areas:
+Open `versions/v3.1/SKILL.md` for the runtime contract, then use `versions/v3.1/references/technical-reference.md` for detailed matrices. Key reference areas:
 - **Section 13** — Quick Stack Selector (decision tree)
 - **Section 9** — Security hardening checklist
 - **Section 10** — ADR template for your next RFC
@@ -77,7 +73,8 @@ versions/
 │   └── SKILL.md              # Historical full reference
 ├── v2.0-lite/
 │   └── SKILL.md              # Historical condensed reference
-└── v3.0/
+├── v3.0/                     # Historical May 2026 runtime
+└── v3.1/
     ├── SKILL.md              # Current compact runtime contract
     └── references/
         ├── technical-reference.md
