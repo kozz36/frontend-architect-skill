@@ -1,5 +1,17 @@
 # Changelog
 
+## [v3.1] - 2026-07-20
+
+### Added
+- Added native-platform decision guidance for Popover API, CSS Anchor Positioning, `@starting-style`, scroll-driven animations, and View Transition API.
+- Added defensive progressive-enhancement rules, reduced-motion handling, and deterministic SSR boundaries.
+- Added verified July 2026 source records for Core Web Vitals, WCAG 2.2, and the European Accessibility Act.
+
+### Changed
+- Prioritized INP as the field interactivity outcome while retaining TBT as a lab proxy.
+- Expanded accessibility guidance for target size and focus not obscured without presenting WCAG as automatic legal compliance.
+- Kept native APIs conditional on semantics, browser support, and tested fallbacks instead of treating them as universal replacements.
+
 ## [v3.0] - 2026-05-15
 
 ### Added
@@ -41,4 +53,3 @@ All version claims validated via Playwright and delegations against live sources
 - ✅ owasp.org Top 10 Client-Side — confirmed real
 - ✅ commission.europa.eu EAA — confirmed real
 - ⚠️ vuejs.org (v3.6.0-beta.10) — confirmed beta, NOT production-ready
-
