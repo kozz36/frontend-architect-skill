@@ -22,22 +22,21 @@ Built from a 688-line research document analyzing the 2025-2026 frontend ecosyst
 
 | Version | File | Size | When to Use |
 |---------|------|------|-------------|
-| **v3.1** (Current) | [`versions/v3.1/SKILL.md`](versions/v3.1/SKILL.md) | Compact runtime + references | Native-platform, progressive-enhancement, INP, SSR, and accessibility architecture update |
+| **v3.1.1** (Current) | [`versions/v3.1.1/SKILL.md`](versions/v3.1.1/SKILL.md) | Compact runtime + references | Independently verified precision patch for normative claims, compatibility gates, security, and source traceability |
+| **v3.1** (Historical) | [`versions/v3.1/SKILL.md`](versions/v3.1/SKILL.md) | Compact runtime + references | July 2026 native-platform and architecture update |
 | **v3.0** (Historical) | [`versions/v3.0/SKILL.md`](versions/v3.0/SKILL.md) | ~55 lines + references | May 2026 references-based runtime skill |
 | **v2.0** (Historical) | [`versions/v2.0/SKILL.md`](versions/v2.0/SKILL.md) | ~556 lines | Preserved for backward compatibility; verify claims against v3 before reuse |
-| **v2.0-lite** (Historical) | [`versions/v2.0-lite/SKILL.md`](versions/v2.0-lite/SKILL.md) | ~385 lines | Preserved for backward compatibility; v3.1 replaces it for active runtime ingestion |
+| **v2.0-lite** (Historical) | [`versions/v2.0-lite/SKILL.md`](versions/v2.0-lite/SKILL.md) | ~385 lines | Preserved for backward compatibility; v3.1.1 replaces it for active runtime ingestion |
 | **v1.0** (Original) | [`versions/v1.0/SKILL.md`](versions/v1.0/SKILL.md) | ~367 lines | Pre-2026 reference. Preserved for backward compatibility |
 
-### What's New in v3.1 (July 2026)
+### What's New in v3.1.1 (July 2026)
 
-Validated against real ecosystem state:
-- **Native overlays and motion** — Popover API, CSS Anchor Positioning, `@starting-style`, and View Transition API with support gates.
-- **Defensive progressive enhancement** — essential content remains visible and operable without optional platform features.
-- **Interaction performance** — INP is the field outcome; TBT remains a lab diagnostic proxy.
-- **Accessibility architecture** — WCAG 2.2 focus visibility, target size, and jurisdiction-specific legal mapping.
-- **Server rendering purity** — browser globals are isolated from server and initial render evaluation.
-
-The update rejects blanket claims that container queries replace media queries, native popovers replace every accessible overlay library, or WCAG alone proves legal compliance.
+Independently audited against primary sources:
+- Separates CI laboratory budgets from production Core Web Vitals measured through RUM/CrUX.
+- Corrects WCAG 2.5.8, EAA scope, MPA View Transitions eligibility, browser storage, and cookie policy.
+- Records specification maturity and target-browser verification separately.
+- Removes categorical SPA, tRPC, TypeScript, ADR, carbon, visual-regression, and framework heuristics.
+- Reconciles all red flags with the conditional architecture gates.
 
 ---
 
@@ -56,7 +55,7 @@ git clone https://github.com/kozz36/frontend-architect-skill.git
 
 ### For Human Architects
 
-Open `versions/v3.1/SKILL.md` for the runtime contract, then use `versions/v3.1/references/technical-reference.md` for detailed matrices. Key reference areas:
+Open `versions/v3.1.1/SKILL.md` for the runtime contract, then use `versions/v3.1.1/references/technical-reference.md` for detailed matrices. Key reference areas:
 - **Section 13** — Quick Stack Selector (decision tree)
 - **Section 9** — Security hardening checklist
 - **Section 10** — ADR template for your next RFC
@@ -74,7 +73,8 @@ versions/
 ├── v2.0-lite/
 │   └── SKILL.md              # Historical condensed reference
 ├── v3.0/                     # Historical May 2026 runtime
-└── v3.1/
+├── v3.1/                     # Historical July 2026 runtime
+└── v3.1.1/
     ├── SKILL.md              # Current compact runtime contract
     └── references/
         ├── technical-reference.md

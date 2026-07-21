@@ -1,5 +1,16 @@
 # Changelog
 
+## [v3.1.1] - 2026-07-20
+
+### Fixed
+- Separated CI laboratory budgets from production Core Web Vitals and RUM/CrUX validation.
+- Corrected WCAG 2.5.8, EAA scope, MPA View Transitions eligibility, browser storage, cookie, and dependency-audit guidance.
+- Replaced stale or categorical framework, rendering, tRPC, TypeScript, ADR, visual-regression, and sustainability heuristics with constraint-based gates.
+- Added primary-specification maturity and claim-level source traceability for the corrected guidance.
+
+### Verification
+- Independent read-only audit result: 0 BLOCKER, 0 HIGH, 0 MEDIUM findings.
+
 ## [v3.1] - 2026-07-20
 
 ### Added
