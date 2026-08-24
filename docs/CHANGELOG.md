@@ -1,5 +1,26 @@
 # Changelog
 
+## [v3.1.2] - 2026-08-24
+
+### Fixed
+- Removed the mandatory `docs/product-charter.md` prerequisite. Stack selection now discovers repository-native authoritative product and constraint sources and blocks only when material constraints remain insufficient.
+- Replaced fixed ADR storage and PR-only review instructions with repository-native convention discovery and conventional fallbacks only when no convention exists.
+- Refreshed volatile release evidence: Angular 22, Astro 7, Vue 3.6 status handling, Next.js 16.3.2, Nuxt 4.5.2, Pinia 4, and the current Vitest patch. Repaired the retired Astro reference URL.
+- Scoped EAA/legal, browser-storage/SameSite, and dependency-audit guidance to their governing jurisdiction, product, threat-model, data-classification, reachability, severity, and policy conditions.
+
+### Added
+- Added canonical installable `skills/frontend-architect` and `skills/frontend-architect-lite` catalogs.
+- Added the machine-readable full-to-lite derivation manifest and PR validation script for version, frozen-input hash, mapped-anchor, archive, discoverability, and prior-lite-input checks.
+
+### Changed
+- Made `skills/` the sole authoritative, current, and installable skills.sh surface: both canonical skills release as v3.1.2. `versions/` is immutable archive-only history, not a parity, default-listing, supported full-depth discovery, or installation surface.
+- Renamed the seven archived `versions/**/SKILL.md` snapshots to byte-preserved `versions/**/ARCHIVE.md` files so historical content remains available without exposing an installable skill surface.
+- Regenerated `frontend-architect-lite` from the frozen canonical full runtime, technical reference, and source index; the v3.1.2 lite archive is byte-identical and non-discoverable.
+
+### Verification
+- Official URLs and observed release/status snapshots are recorded with 2026-08-24 verification dates in the canonical source index.
+- `scripts/validate-derived-lite.sh` verifies machine-checkable derivation integrity; independent review remains responsible for semantic-strength assessment.
+
 ## [v3.1.1] - 2026-07-20
 
 ### Fixed
