@@ -11,7 +11,8 @@
 - Added canonical installable `skills/frontend-architect` and `skills/frontend-architect-lite` catalogs.
 
 ### Changed
-- Made `skills/` the sole authoritative, current, and installable skills.sh surface: both canonical skills release as v3.1.2. `versions/` is immutable archive-only history, not a parity, default-listing, or installation surface.
+- Made `skills/` the sole authoritative, current, and installable skills.sh surface: both canonical skills release as v3.1.2. `versions/` is immutable archive-only history, not a parity, default-listing, supported full-depth discovery, or installation surface.
+- Renamed the seven archived `versions/**/SKILL.md` snapshots to byte-preserved `versions/**/ARCHIVE.md` files so historical content remains available without exposing an installable skill surface.
 - Updated `frontend-architect-lite` metadata to v3.1.2 and corrected its Vitest screenshot matcher, cross-platform baseline, and WCAG target-size guidance.
 
 ### Verification

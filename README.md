@@ -20,19 +20,19 @@ Built from a 688-line research document analyzing the 2025-2026 frontend ecosyst
 
 ## 📦 Current Skills and Release Archives
 
-`skills/` is the sole authoritative, current, and installable skills.sh surface. Both canonical skills release as v3.1.2. `versions/` contains immutable historical release archives only: it is not a parity source, default selection surface, or current installation path.
+`skills/` is the sole authoritative, current, and installable skills.sh surface. Both canonical skills release as v3.1.2. `versions/` contains immutable historical release archives only: it contains no `SKILL.md`, is not a parity source or installation path, and is excluded from default and supported full-depth discovery.
 
 | Release | File | Size | When to Use |
 |---------|------|------|-------------|
 | **v3.1.2** (Current full) | [`skills/frontend-architect/SKILL.md`](skills/frontend-architect/SKILL.md) | Compact runtime + references | Canonical full skill; a clean install includes its references |
 | **v3.1.2** (Current lite) | [`skills/frontend-architect-lite/SKILL.md`](skills/frontend-architect-lite/SKILL.md) | ~385 lines | Canonical lite skill for rapid stack selection |
-| **v3.1.2** (Archive) | [`versions/v3.1.2/SKILL.md`](versions/v3.1.2/SKILL.md) | Compact runtime + references | Immutable archived snapshot; not an installation source |
-| **v3.1.1** (Historical) | [`versions/v3.1.1/SKILL.md`](versions/v3.1.1/SKILL.md) | Compact runtime + references | Independently verified precision patch for normative claims, compatibility gates, security, and source traceability |
-| **v3.1** (Historical) | [`versions/v3.1/SKILL.md`](versions/v3.1/SKILL.md) | Compact runtime + references | July 2026 native-platform and architecture update |
-| **v3.0** (Historical) | [`versions/v3.0/SKILL.md`](versions/v3.0/SKILL.md) | ~55 lines + references | May 2026 references-based runtime skill |
-| **v2.0** (Historical) | [`versions/v2.0/SKILL.md`](versions/v2.0/SKILL.md) | ~556 lines | Preserved for backward compatibility; verify claims against v3 before reuse |
-| **v2.0-lite** (Historical) | [`versions/v2.0-lite/SKILL.md`](versions/v2.0-lite/SKILL.md) | ~385 lines | Immutable historical lite archive; not an installation source |
-| **v1.0** (Original) | [`versions/v1.0/SKILL.md`](versions/v1.0/SKILL.md) | ~367 lines | Pre-2026 reference. Preserved for backward compatibility |
+| **v3.1.2** (Archive) | [`versions/v3.1.2/ARCHIVE.md`](versions/v3.1.2/ARCHIVE.md) | Compact runtime + references | Immutable byte-preserved historical snapshot; not an installation source |
+| **v3.1.1** (Historical) | [`versions/v3.1.1/ARCHIVE.md`](versions/v3.1.1/ARCHIVE.md) | Compact runtime + references | Independently verified precision patch for normative claims, compatibility gates, security, and source traceability |
+| **v3.1** (Historical) | [`versions/v3.1/ARCHIVE.md`](versions/v3.1/ARCHIVE.md) | Compact runtime + references | July 2026 native-platform and architecture update |
+| **v3.0** (Historical) | [`versions/v3.0/ARCHIVE.md`](versions/v3.0/ARCHIVE.md) | ~55 lines + references | May 2026 references-based runtime skill |
+| **v2.0** (Historical) | [`versions/v2.0/ARCHIVE.md`](versions/v2.0/ARCHIVE.md) | ~556 lines | Preserved for backward compatibility; verify claims against v3 before reuse |
+| **v2.0-lite** (Historical) | [`versions/v2.0-lite/ARCHIVE.md`](versions/v2.0-lite/ARCHIVE.md) | ~385 lines | Immutable historical lite archive; not an installation source |
+| **v1.0** (Original) | [`versions/v1.0/ARCHIVE.md`](versions/v1.0/ARCHIVE.md) | ~367 lines | Pre-2026 reference. Preserved for backward compatibility |
 
 ### What's New in v3.1.2 (August 2026)
 
@@ -49,7 +49,7 @@ Built from a 688-line research document analyzing the 2025-2026 frontend ecosyst
 
 ```bash
 # Default listing: frontend-architect and frontend-architect-lite only
-npx skills add --list
+npx skills add kozz36/frontend-architect-skill --list
 
 # Clean install: full v3.1.2, including references
 npx skills add kozz36/frontend-architect-skill@frontend-architect
@@ -58,11 +58,11 @@ npx skills add kozz36/frontend-architect-skill@frontend-architect
 npx skills add kozz36/frontend-architect-skill@frontend-architect-lite
 ```
 
-Browse the canonical catalog on [skills.sh](https://skills.sh/kozz36/frontend-architect-skill). The default listing and clean installs resolve only `skills/`: they never select v1.0, v2.0-lite, or any `versions/` archive.
+Browse the canonical catalog on [skills.sh](https://skills.sh/kozz36/frontend-architect-skill). The default listing, supported full-depth discovery, and clean installs resolve only the two `skills/*/SKILL.md` files; they never select a `versions/` archive.
 
 ### For Human Architects
 
-Open `skills/frontend-architect/SKILL.md` for the current full runtime contract, then use `skills/frontend-architect/references/technical-reference.md` for detailed matrices. `versions/v3.1.2/` is an archive-only snapshot, not a current installation path. Key reference areas:
+Open `skills/frontend-architect/SKILL.md` for the current full runtime contract, then use `skills/frontend-architect/references/technical-reference.md` for detailed matrices. `versions/v3.1.2/ARCHIVE.md` is a byte-preserved archive-only snapshot, not a current installation path. Key reference areas:
 - **Section 13** — Quick Stack Selector (decision tree)
 - **Section 9** — Security hardening checklist
 - **Section 10** — ADR template for your next RFC
@@ -80,15 +80,15 @@ skills/                         # Sole authoritative/current/installable skills.
 │       └── source-index.md
 └── frontend-architect-lite/     # Current lite release v3.1.2
     └── SKILL.md
-versions/                       # Immutable historical archives only; never a default install path
-├── v1.0/
-├── v2.0/
-├── v2.0-lite/
-├── v3.0/
-├── v3.1/
-├── v3.1.1/
+versions/                       # Immutable historical archives only; never an install path
+├── v1.0/                         # ARCHIVE.md
+├── v2.0/                         # ARCHIVE.md
+├── v2.0-lite/                    # ARCHIVE.md
+├── v3.0/                         # ARCHIVE.md + references/
+├── v3.1/                         # ARCHIVE.md + references/
+├── v3.1.1/                       # ARCHIVE.md + references/
 └── v3.1.2/
-    ├── SKILL.md
+    ├── ARCHIVE.md
     └── references/
         ├── technical-reference.md
         └── source-index.md
