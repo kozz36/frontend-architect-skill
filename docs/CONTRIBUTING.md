@@ -49,10 +49,24 @@ Every claim about a **version number, feature, or security status** must include
 
 ## How to Submit
 
-1. Fork the repo
-2. Edit the relevant `SKILL.md` (or create new version directory)
-3. Update `docs/CHANGELOG.md` with your changes
-4. Open a PR referencing the verification source
+1. Fork the repo.
+2. Edit the canonical full runtime and its local references first; never use a prior lite file or archive as a source.
+3. For a lite release, follow the full-to-lite derivation process below.
+4. Update `docs/CHANGELOG.md` with verified changes.
+5. Open a PR referencing the official verification source.
+
+## Full-to-Lite Release Derivation
+
+A lite release is a compact runtime derived from the exact canonical full release, not an independently authored tutorial.
+
+1. **Full first** — finish and verify canonical full `X` plus every local reference and source-index record.
+2. **Freeze inputs** — record canonical full paths and SHA-256 values. Prior lite files and archives are prohibited inputs.
+3. **Inventory** — enumerate the full runtime's normative invariants, categories, and required lite anchors.
+4. **Compact** — remove only duplicated rationale, long examples, exhaustive tables, and repeated links; preserve activation/exclusions, stop gates, conditional decisions, runtime boundaries, safety/legal/privacy rules, evidence handling, risks/fallbacks, and output contract.
+5. **Validate** — run `scripts/validate-derived-lite.sh` and perform independent semantic coverage review; the script verifies derivation integrity, not semantic strength.
+6. **Archive** — write the matching current lite archive as byte-identical `ARCHIVE.md`, outside discoverable skill surfaces.
+
+Keep full and lite metadata at the same unpublished version. Update the derivation manifest whenever a frozen full input or generated lite byte changes.
 
 ## Version Policy
 

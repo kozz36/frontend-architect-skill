@@ -1,55 +1,59 @@
 # Frontend Architecture Source Index
 
-Source index for `../SKILL.md` and `technical-reference.md`.
+Official-source evidence for `../SKILL.md` and `technical-reference.md`.
 
 ## Verification Policy
 
-- Do not use a new version/API/security claim in decision guidance, a changelog, or a release note without checking a live source.
-- Record newly verified claims with date, source URL, and what was confirmed.
-- Distinguish specification existence, maturity, implementation support, and tested interoperability; `Confirmed` never implies all four.
-- Prefer primary specifications for normative semantics. Use MDN and compatibility tables as secondary implementation guidance and record target-engine evidence separately.
-- `Needs re-verification` below applies to inherited claims not independently recorded in the claim-level log; a later verified claim does not validate every statement associated with the same domain.
+- Do not use a new version, release channel, API, security, accessibility, or legal-status claim in decision guidance, a changelog, or a release note without a live official-source check.
+- Record the exact claim, source URL, verification date, and observed result. A successful URL request proves reachability, not support in every target runtime.
+- Separate specification semantics, implementation support, target-browser support, tested interoperability, policy, and legal applicability.
+- Prefer primary specifications and release owners for normative semantics and releases. Use secondary compatibility material only for implementation guidance and record target-engine evidence separately.
+- Re-verify every volatile release/status claim immediately before using it in a recommendation. The 2026-08-24 entries below are an audit snapshot, not a permanent pin.
 
-## Extracted Sources
+## Official Sources
 
-| Source | URL | Verification Status |
-|--------|-----|---------------------|
-| web.dev | https://web.dev/vitals/ | Needs re-verification before new decision claims. |
-| w3.org | https://www.w3.org/TR/WCAG22/ | Needs re-verification before new decision claims. |
-| tanstack.com | https://tanstack.com/query | Needs re-verification before new decision claims. |
-| radix-ui.com | https://www.radix-ui.com/ | Needs re-verification before new decision claims. |
-| ark-ui.com | https://ark-ui.com/ | Needs re-verification before new decision claims. |
-| ui.shadcn.com | https://ui.shadcn.com/ | Needs re-verification before new decision claims. |
-| vitest.dev | https://vitest.dev/guide/browser/ | Needs re-verification before new decision claims. |
-| docs.astro.build | https://docs.astro.build/en/concepts/islands/ | Needs re-verification before new decision claims. |
-| owasp.org | https://owasp.org/www-project-top-10-client-side-security-risks/ | Needs re-verification before new decision claims. |
-| commission.europa.eu | https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/european-accessibility-act-eaa_en | Needs re-verification before new decision claims. |
-| adr.github.io | https://adr.github.io/ | Needs re-verification before new decision claims. |
-| thegreenwebfoundation.org | https://www.thegreenwebfoundation.org/ | Needs re-verification before new decision claims. |
+| Domain | Official source | Verified 2026-08-24 | Use |
+|---|---|---|---|
+| Angular release support | https://angular.dev/reference/releases | HTTP 200; current documentation served the v22 release site | Verify active/support status before adopting Angular |
+| Angular release tag | https://github.com/angular/angular/releases/tag/v22.1.3 | HTTP 200 | Evidence for the audited Angular 22 release-line snapshot |
+| Astro 7 announcement | https://astro.build/blog/astro-7/ | HTTP 200; official Astro 7.0 announcement | Current-major snapshot; replaces the retired Astro reference endpoint |
+| Astro 7 upgrade guide | https://docs.astro.build/en/guides/upgrade-to/v7/ | HTTP 200 | Verify upgrade and migration conditions |
+| Astro islands | https://docs.astro.build/en/concepts/islands/ | HTTP 200 | Islands capability reference |
+| Vue release policy | https://vuejs.org/about/releases | HTTP 200 | Release-channel and pre-release stability policy |
+| Vue latest release | https://github.com/vuejs/core/releases/latest | HTTP 200; redirected to `v3.5.41` | Latest-tag snapshot; do not infer a Vue 3.6 status |
+| Next.js release | https://github.com/vercel/next.js/releases/tag/v16.3.2 | HTTP 200 | Exact audited release tag |
+| Nuxt release | https://github.com/nuxt/nuxt/releases/tag/v4.5.2 | HTTP 200 | Exact audited release tag |
+| Pinia release | https://github.com/vuejs/pinia/releases/tag/v4.0.0 | HTTP 200 | Pinia 4 release-line evidence |
+| Pinia package metadata | https://registry.npmjs.org/pinia/latest | HTTP 200; latest `version` field was `4.0.3` | Exact package-patch snapshot; re-check before pinning |
+| Vitest release | https://github.com/vitest-dev/vitest/releases/latest | HTTP 200; redirected to `v4.1.11` | Latest-patch snapshot; re-check before pinning |
+| Core Web Vitals | https://web.dev/articles/vitals | HTTP 200 | Metric definitions and field/lab distinction; live-check before a new metric claim |
+| WCAG 2.2 | https://www.w3.org/TR/WCAG22/ | HTTP 200 | Normative accessibility semantics; live-check before a conformance claim |
+| EAA Directive | https://eur-lex.europa.eu/eli/dir/2019/882/oj/eng | HTTP 200 | Product/service, jurisdiction, exemption, and transition analysis; live-check before a legal claim |
+| OWASP client-side risks | https://owasp.org/www-project-top-10-client-side-security-risks/ | HTTP 200 | Threat-model guidance; live-check before a new security-status claim |
+| npm audit | https://docs.npmjs.com/cli/v11/commands/npm-audit/ | HTTP 200 | Audit command behavior; policy remains organizational |
+| HTML Popover | https://html.spec.whatwg.org/multipage/popover.html | HTTP 200 | Normative semantics; support and fallback remain separate |
+| CSS Anchor Positioning | https://drafts.csswg.org/css-anchor-position-1/ | HTTP 200 | Draft semantics; target support remains separate |
+| CSS Transitions | https://drafts.csswg.org/css-transitions-2/ | HTTP 200 | `@starting-style` and discrete-transition semantics |
+| View Transitions | https://www.w3.org/TR/css-view-transitions-2/ | HTTP 200 | Same- and cross-document semantics |
 
-## New Verification Log
+## Retained Volatile Claim Log
+
+| Date | Claim | Official source evidence | Result and required use |
+|---|---|---|---|
+| 2026-08-24 | Angular's active release documentation was on the v22 site; the latest official tag resolved to `v22.1.3`. | Angular support page and release tag above | Keep `Angular 22 active line` only as a dated snapshot; live-check support state before selection. |
+| 2026-08-24 | Astro 7 is the current-major release evidence used by this reference; the Astro 7 announcement and v7 upgrade guide are reachable. | Astro URLs above | Use Astro 7 only after validating adapter, application mode, and upgrade constraints. Do not restore the retired Astro reference endpoint. |
+| 2026-08-24 | The latest official Vue release redirect resolved to `v3.5.41`; Vue's official policy says pre-releases are unstable. | Vue URLs above | Vue 3.6/Vapor status is unconfirmed by this snapshot and must be checked live for the exact release channel before a production claim. |
+| 2026-08-24 | `v16.3.2` was the audited Next.js release tag. | Next.js release tag above | Treat it as evidence, not a durable default or feature guarantee. |
+| 2026-08-24 | `v4.5.2` was the audited Nuxt release tag. | Nuxt release tag above | Treat it as evidence, not a durable default or feature guarantee. |
+| 2026-08-24 | Pinia 4 release evidence was reachable; the official npm registry latest metadata reported `4.0.3`. | Pinia URLs above | Re-check exact package and framework compatibility before pinning. |
+| 2026-08-24 | The official Vitest latest-release redirect resolved to `v4.1.11`. | Vitest release URL above | Re-check the patch and Browser Mode/provider API before pinning or publishing a test recommendation. |
+
+## Durable Claim Records
 
 | Date | Claim | Source | Result |
-|------|-------|--------|--------|
-| 2026-05-15 | Next.js 16.2.x is current docs line; Node.js 20.9+ required by v16 upgrade guide. | https://nextjs.org/docs and https://nextjs.org/docs/app/guides/upgrading/version-16 | Confirmed. |
-| 2026-05-15 | Nuxt 4.4.x is current Nuxt 4 line; Nuxt 5 is still future compatibility/testing path. | https://nuxt.com/docs/4.x and https://github.com/nuxt/nuxt/releases/tag/v4.4.5 | Confirmed. |
-| 2026-05-15 | Vue stable is 3.5.34 and Vue 3.6/Vapor is beta prerelease. | https://vuejs.org/about/releases and https://github.com/vuejs/core/releases/tag/v3.6.0-beta.12 | Confirmed. |
-| 2026-05-15 | Vite 8 is current supported major; Vite 6 only receives security backports. | https://vite.dev/releases and https://vite.dev/blog/announcing-vite8 | Updated guidance from Vite 6 to Vite 8. |
-| 2026-05-15 | Angular active version is 21.2.x; Angular 19 is LTS, not current active. | https://angular.dev/reference/releases and https://github.com/angular/angular/releases/tag/v21.2.12 | Updated guidance from Angular 19 to Angular 21. |
-| 2026-05-15 | Vitest visual regression uses toMatchScreenshot; do not document toMatchImageSnapshot as Vitest Browser Mode API. | https://vitest.dev/guide/browser/visual-regression-testing and https://vitest.dev/config/browser/expect | Corrected. |
-| 2026-05-15 | v3.0 restructuring only; no new technical/version claims added. | Upstream migration record. | Structural change only. |
-| 2026-07-20 | Popover provides non-modal top-layer UI, declarative controls, and `auto`, `hint`, and `manual` states; modal interaction remains a `<dialog>` use case. | https://html.spec.whatwg.org/multipage/popover.html and https://developer.mozilla.org/en-US/docs/Web/API/Popover_API | Semantics confirmed in the HTML Living Standard; MDN is secondary implementation guidance. Target-browser support still requires verification. |
-| 2026-07-20 | CSS Anchor Positioning defines anchor association, anchor-relative sizing/positioning, and overflow fallback mechanisms. | https://drafts.csswg.org/css-anchor-position-1/ and https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_anchor_positioning | Semantics confirmed; Level 1 is a Working Draft. Use only as progressive enhancement with target-browser evidence. |
-| 2026-07-20 | `@starting-style` enables first-style transitions; top-layer exit transitions may require discrete `display` and `overlay` handling. | https://drafts.csswg.org/css-transitions-2/ and https://developer.mozilla.org/en-US/docs/Web/CSS/@starting-style | Semantics confirmed in CSS Transitions Level 2 Editor's Draft; fallback and target-browser verification remain required. |
-| 2026-07-20 | Scroll-driven animations expose scroll and view timelines; unsupported enhancement must not hide essential content. | https://www.w3.org/TR/scroll-animations-1/ and https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll-driven_animations | Semantics confirmed; specification is a Working Draft and interoperability must be checked per target engine. |
-| 2026-07-20 | View Transitions support same-document and eligible same-origin cross-document transitions with opt-in and navigation constraints. | https://www.w3.org/TR/css-view-transitions-2/ and https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API | Semantics confirmed; Level 2 is a Working Draft. MPA eligibility and target-browser support require explicit verification. |
-| 2026-07-20 | Current Core Web Vitals are LCP, INP, and CLS; good INP is <=200ms at the 75th percentile, while TBT is a lab proxy rather than a Core Web Vital. | https://web.dev/articles/vitals | Confirmed. |
-| 2026-07-20 | WCAG 2.2 is a W3C Recommendation and adds AA criteria including Focus Not Obscured (Minimum) and Target Size (Minimum). | https://www.w3.org/TR/WCAG22/ | Confirmed; no claim that WCAG alone establishes legal compliance. |
-| 2026-07-20 | The EAA covers defined products and services including e-commerce and banking; Member States transpose and implement the directive. | https://eur-lex.europa.eu/eli/dir/2019/882/oj/eng and https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/european-accessibility-act-eaa_en | Scope confirmed from the Directive; Commission guidance is secondary. Legal obligations must be mapped by product, operator, jurisdiction, exemptions, and transition. |
-| 2026-07-20 | WCAG 2.2 SC 2.5.8 allows 24×24 CSS px targets, sufficient spacing, or defined exceptions. | https://www.w3.org/TR/WCAG22/#target-size-minimum | Confirmed; 44×44 remains a product baseline, not a WCAG AA requirement. |
-| 2026-07-20 | INP is field-measured; Lighthouse uses TBT as a laboratory proxy and cannot prove production INP. | https://web.dev/articles/vitals | Confirmed; CI and production performance gates are separated. |
-| 2026-07-20 | Astro's current documentation and release policy must be checked before pinning a major; React Router framework mode supports SSR and prerendering and is the migration path from Remix v2. | https://docs.astro.build/en/reference/ and https://reactrouter.com/upgrading/remix | Confirmed; references use capability gates instead of stale Astro/Remix scenario claims. |
-| 2026-07-20 | shadcn/ui supports selectable primitive bases including Radix and Base UI. | https://ui.shadcn.com/docs/installation | Confirmed; the reference no longer treats Radix as the only base. |
-| 2026-07-20 | Playwright screenshot baselines must be compared in a consistent environment and may be named by platform or browser. | https://playwright.dev/docs/test-snapshots | Confirmed; visual regression is not restricted to Linux. |
-| 2026-07-20 | npm audit supports configurable severity thresholds; blocking policy remains an organizational risk decision. | https://docs.npmjs.com/cli/v11/commands/npm-audit/ | Confirmed; dependency gates use one documented threshold and exception process. |
-| 2026-07-20 | Green Web verification may rely on evidence for avoiding, reducing, or compensating emissions rather than only a 100% renewable-energy claim. | https://www.thegreenwebfoundation.org/green-web-check/ | Confirmed; hosting guidance no longer mandates one evidence route. |
+|---|---|---|---|
+| 2026-07-20 | Core Web Vitals are LCP, INP, and CLS; good INP is <=200 ms at the 75th percentile, while TBT is a laboratory proxy. | https://web.dev/articles/vitals | Use field and laboratory evidence separately. Re-check the live page before introducing a new metric claim. |
+| 2026-07-20 | WCAG 2.2 SC 2.5.8 permits 24 x 24 CSS-pixel targets, spacing, or defined exceptions. | https://www.w3.org/TR/WCAG22/#target-size-minimum | A 44 x 44 target remains a product baseline, not a WCAG AA requirement. |
+| 2026-07-20 | EAA applicability depends on covered product/service, operator, Member State implementation, exemptions, and transitions. | https://eur-lex.europa.eu/eli/dir/2019/882/oj/eng | Do not assert legal compliance without jurisdictional mapping and qualified legal review. |
+| 2026-07-20 | Cookie storage, SameSite choice, and dependency-audit blocking policy require threat-model and policy context. | https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie and https://docs.npmjs.com/cli/v11/commands/npm-audit/ | Select controls from data classification, navigation/CSRF model, severity, exploitability, reachability, asset sensitivity, and owned exceptions. |
+| 2026-07-20 | Popover, anchor positioning, `@starting-style`, scroll-driven animation, and View Transitions require separate semantics, support, and fallback checks. | URLs in the official-source table | Preserve a fully usable unenhanced state and test target engines. |

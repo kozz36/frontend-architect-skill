@@ -28,7 +28,7 @@ Do not use this skill for generic explanation, copy editing, or one-off code cha
 - Keep server-rendered output deterministic: do not read `window`, `document`, or `navigator` during server rendering or initial render evaluation.
 - Prefer local, inspectable component patterns when agents must maintain the codebase.
 - Keep the main answer decision-first; move deep rationale to local references instead of long inline prose.
-- Verify version- or API-sensitive claims against live sources before using them in decision guidance or presenting them in a changelog or release note.
+- Verify version- or API-sensitive claims against live official sources before using them in decision guidance or presenting them in a changelog or release note.
 
 ## Decision Gates
 
@@ -50,7 +50,7 @@ Do not use this skill for generic explanation, copy editing, or one-off code cha
 3. Select the smallest architecture that satisfies the verified SoT inputs.
 4. Read `references/technical-reference.md` when detailed matrices, native-platform patterns, anti-patterns, commands, or source links are needed.
 5. State the chosen pattern, rejected alternatives, and what breaks at runtime if the choice is wrong.
-6. Verify version- or API-sensitive claims against live sources before using them in decision guidance or presenting them in a changelog or release note.
+6. Verify version- or API-sensitive claims against live official sources before using them in decision guidance or presenting them in a changelog or release note.
 
 ## Output Contract
 
@@ -63,5 +63,5 @@ Return:
 
 ## References
 
-- `references/technical-reference.md` — curated technical basis for v3.1.2 decisions.
-- `references/source-index.md` — source links and verification status for version-sensitive claims.
+- `references/technical-reference.md` — canonical full v3.1.2 technical basis for detailed decisions.
+- `references/source-index.md` — official source evidence and verification dates for retained volatile claims.

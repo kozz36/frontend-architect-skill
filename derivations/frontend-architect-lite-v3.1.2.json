@@ -1,0 +1,153 @@
+{
+  "schemaVersion": "frontend-architect-lite-derivation/v1",
+  "generatedAt": "2026-08-24",
+  "fullVersion": "3.1.2",
+  "liteVersion": "3.1.2",
+  "sourceInputs": [
+    {
+      "path": "skills/frontend-architect/SKILL.md",
+      "sha256": "693812c1653a46bd8828a1992917793d78b0c3b0471131e4fb9be462298de572",
+      "role": "canonical full runtime"
+    },
+    {
+      "path": "skills/frontend-architect/references/technical-reference.md",
+      "sha256": "dc251d0b59621a2a0e269395096914fa306d2d58780c666a82e325f4c6bbafae",
+      "role": "canonical full technical reference"
+    },
+    {
+      "path": "skills/frontend-architect/references/source-index.md",
+      "sha256": "ec2e40844985f3fcd5ef6b06c64925d37dd2572d9e473dbe543796670098c0c3",
+      "role": "canonical full official-source evidence"
+    }
+  ],
+  "fullArchive": {
+    "skill": "versions/v3.1.2/ARCHIVE.md",
+    "technicalReference": "versions/v3.1.2/references/technical-reference.md",
+    "sourceIndex": "versions/v3.1.2/references/source-index.md",
+    "parity": "byte-identical to the three canonical full inputs at generation"
+  },
+  "generatedLite": {
+    "path": "skills/frontend-architect-lite/SKILL.md",
+    "sha256": "cf195eed5430edd4d1571eb8a7d3bb9e1970303e427a3755753469b3241a1c49"
+  },
+  "liteArchive": {
+    "path": "versions/v3.1.2-lite/ARCHIVE.md",
+    "parity": "byte-identical to generatedLite"
+  },
+  "forbiddenPriorLiteInputs": [
+    "skills/frontend-architect-lite/SKILL.md",
+    "versions/v2.0-lite/ARCHIVE.md",
+    "versions/v3.1.2-lite/ARCHIVE.md"
+  ],
+  "invariantInventory": [
+    {
+      "id": "activation-scope",
+      "category": "activation",
+      "fullAnchors": ["Activation Contract"],
+      "liteAnchors": ["Activation and exclusions"],
+      "preservation": "Preserved activation use cases and explicit exclusions."
+    },
+    {
+      "id": "repository-discovery",
+      "category": "evidence",
+      "fullAnchors": ["Hard Rules", "Execution Steps"],
+      "liteAnchors": ["Evidence and stop gates"],
+      "preservation": "Preserved repository-native authoritative-source discovery."
+    },
+    {
+      "id": "constraint-stop",
+      "category": "stop-gate",
+      "fullAnchors": ["Hard Rules", "Decision Gates"],
+      "liteAnchors": ["Evidence and stop gates"],
+      "preservation": "Preserved mandatory stop when material constraints cannot discriminate."
+    },
+    {
+      "id": "conditional-stack-rendering",
+      "category": "decision",
+      "fullAnchors": ["Decision Gates", "Rendering and Meta-Frameworks", "Constraint-Matched Candidates and Red Flags"],
+      "liteAnchors": ["Decision sequence", "Selection gates"],
+      "preservation": "Preserved constraint-driven stack, SSR, SSG, islands, hybrid, SPA, and contract choices."
+    },
+    {
+      "id": "design-css-tool-choices",
+      "category": "decision",
+      "fullAnchors": ["Hard Rules", "Decision Gates", "Design Systems, CSS, and Native Platform"],
+      "liteAnchors": ["Selection gates", "Runtime boundaries and progressive enhancement"],
+      "preservation": "Preserved native HTML/CSS and Popover preference conditions, conditional design-system and styling choices, and native-platform fallback gates."
+    },
+    {
+      "id": "state-boundaries",
+      "category": "runtime",
+      "fullAnchors": ["State and Forms"],
+      "liteAnchors": ["Selection gates"],
+      "preservation": "Preserved server/cache versus client UI state separation and escalation conditions."
+    },
+    {
+      "id": "ssr-runtime-boundaries",
+      "category": "runtime",
+      "fullAnchors": ["Hard Rules", "Runtime, Types, and Workspace Boundaries"],
+      "liteAnchors": ["Runtime boundaries and progressive enhancement"],
+      "preservation": "Preserved deterministic initial render and browser-only lifecycle boundaries."
+    },
+    {
+      "id": "progressive-enhancement",
+      "category": "resilience",
+      "fullAnchors": ["Hard Rules", "Design Systems, CSS, and Native Platform"],
+      "liteAnchors": ["Runtime boundaries and progressive enhancement"],
+      "preservation": "Preserved usable unenhanced content, support gating, motion, and fallback requirements."
+    },
+    {
+      "id": "performance-testing",
+      "category": "quality",
+      "fullAnchors": ["Performance and Core Web Vitals", "Testing Strategy"],
+      "liteAnchors": ["Quality and safety gates"],
+      "preservation": "Preserved laboratory and field CWV distinction, measured budgets, and layered testing evidence."
+    },
+    {
+      "id": "accessibility-legal-scope",
+      "category": "safety",
+      "fullAnchors": ["Accessibility and Legal Scope"],
+      "liteAnchors": ["Quality and safety gates"],
+      "preservation": "Preserved WCAG engineering baseline, manual validation, and product/jurisdiction/exemption/transition/legal-review scope."
+    },
+    {
+      "id": "security-privacy-threat-model",
+      "category": "safety",
+      "fullAnchors": ["Hard Rules", "Client-Side Security and Privacy"],
+      "liteAnchors": ["Quality and safety gates"],
+      "preservation": "Preserved security-header architecture, server authorization, storage/data classification, SameSite threat-model, CSP, audit policy, and privacy controls."
+    },
+    {
+      "id": "version-live-evidence",
+      "category": "evidence",
+      "fullAnchors": ["Hard Rules", "Verification Policy", "Retained Volatile Claim Log"],
+      "liteAnchors": ["Evidence and stop gates", "Selection gates"],
+      "preservation": "Preserved official live verification and the distinction between dated evidence and current support."
+    },
+    {
+      "id": "risks-fallback-output",
+      "category": "output",
+      "fullAnchors": ["Execution Steps", "Output Contract", "Constraint-Matched Candidates and Red Flags"],
+      "liteAnchors": ["Decision sequence", "Evidence, risks, and output"],
+      "preservation": "Preserved rejected alternatives, failure triggers, mitigation/fallback, validation, and blocking-question output."
+    }
+  ],
+  "nonNormativeOmissions": [
+    {
+      "category": "duplicate rationale",
+      "justification": "The lite runtime retains decision conditions and guards once without the full reference's repeated explanations."
+    },
+    {
+      "category": "long examples and templates",
+      "justification": "Server mutation and ADR examples illustrate the full runtime but add no independent lite obligation."
+    },
+    {
+      "category": "exhaustive comparison tables",
+      "justification": "Candidate names and selection guards remain; exhaustive candidate detail stays in the canonical full reference."
+    },
+    {
+      "category": "repeated source URLs",
+      "justification": "The lite runtime requires live official-source evidence; the canonical full source index retains the audited URLs and dates."
+    }
+  ]
+}
