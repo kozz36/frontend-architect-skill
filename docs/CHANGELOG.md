@@ -1,5 +1,22 @@
 # Changelog
 
+## [v3.1.2] - 2026-08-24
+
+### Fixed
+- Removed the mandatory `docs/product-charter.md` prerequisite. Stack selection now discovers repository-native authoritative product and constraint sources and blocks only when material constraints remain insufficient.
+- Replaced fixed ADR storage and PR-only review instructions with repository-native convention discovery and conventional fallbacks only when no convention exists.
+- Restored live-source verification before version-sensitive decision guidance, changelog claims, and release-note claims.
+
+### Added
+- Added canonical installable `skills/frontend-architect` and `skills/frontend-architect-lite` catalogs.
+
+### Changed
+- Made `skills/` the sole authoritative, current, and installable skills.sh surface: both canonical skills release as v3.1.2. `versions/` is immutable archive-only history, not a parity, default-listing, or installation surface.
+- Updated `frontend-architect-lite` metadata to v3.1.2 and corrected its Vitest screenshot matcher, cross-platform baseline, and WCAG target-size guidance.
+
+### Verification
+- This patch adds no external version, API, or security claims; existing source records remain unchanged.
+
 ## [v3.1.1] - 2026-07-20
 
 ### Fixed
